@@ -34,7 +34,12 @@ $ python data_collection_no_map_data.py --folder desired/data/saving/folder/
 
 #### Model training :
 
-for this task we use the Xception, since we are using pytorch instead of tensorflow for Cuda compatibility reasons 
+for this task we use the Xception, since we are using pytorch instead of tensorflow for Cuda compatibility reasons we used the Xception model converted to the torch format from the following repository : 
+
+https://github.com/tstandley/Xception-PyTorch/blob/master/xception.py 
+
+
+which should be downloaded and put in your carla folder in order to import it to our python code file
 
 
 
