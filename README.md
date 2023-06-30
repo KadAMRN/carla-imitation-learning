@@ -18,6 +18,9 @@ To install all the dependencies to run our code, please use this following line 
 $ conda install --file Requirements.txt
 
 ## How to :
+
+### Please launch the CarlaUE4.exe or CarlaUE4.sh before running any python the data gathering code
+
 ### Behavioural cloning :
 
 We can divide this part of the project in three parts, just as in machine learning, so the first part would be the data gathering, next we'd have the model training, and finally loading the model loading into Carla agent in order to control our agent which is the spawned car with the model predictions.
