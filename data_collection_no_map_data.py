@@ -20,11 +20,17 @@ import argparse
 import keyboard
 import threading
 
+import argparse
+
+
+
+
 
 #autopilot parser
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Autopilot Flag Parser')
     parser.add_argument('--autopilot', action='store_true', help='Enable autopilot')
+    parser.add_argument('--folder', type=str, help='Path to the file')
     return parser.parse_args()
 
 # Function to control the vehicle with keyboard inputs
@@ -151,7 +157,15 @@ if today.minute < 10:
     m = "0"+str(today.minute)
 else:
     m = str(today.minute)
-directory = "C:\\Users\\Kader\\OneDrive\\Bureau\\WindowsNoEditor\\my work\\TestData" + today.strftime('%Y%m%d_')+ h + m + "_npy"
+
+
+if args.folder :
+    file_path=args.folder
+
+else :
+    print("please add the --folder YOUR/Folder/ argument to your prompt command")
+    
+directory = file_path + today.strftime('%Y%m%d_')+ h + m + "_npy"
 
 print(directory)
 
@@ -258,7 +272,7 @@ update_spectator_view_thread.start()
 try:
     i = 0
     #How much frames do we want to save
-    while i < 2500:
+    while i < 15000:
         world_snapshot = world.wait_for_tick()
         clear_output(wait=True)
         display(f"{str(i)} frames saved")
