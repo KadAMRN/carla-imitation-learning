@@ -26,11 +26,11 @@ We can divide this part of the project in three parts, just as in machine learni
 
 We make our data collection in the data_collection_no_map_data.py file, for the data collection we have 2 choices, we can either collect our data from the built in Carla auto pilot for this please exectute this command in your Anaconda prompt : 
 
-$ python data_collection_no_map_data.py --autopilot
+$ python data_collection_no_map_data.py --autopilot --folder desired/data/saving/folder/
 
 and we can also make our data collection with a manual control of the car using the keyboard arrow keys (please make sure to have your keyboard set in english on your operating system for this) by executing the following command in your anaconda prompt :
 
-$ python data_collection_no_map_data.py
+$ python data_collection_no_map_data.py --folder desired/data/saving/folder/
 
 #### Model training :
 
