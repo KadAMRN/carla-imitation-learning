@@ -4,7 +4,7 @@
 $ pip install virtualenv
 now that we installed the virtualenv extension we need to create our python virtual environnement, in our case we setup our environnement on python 3.8 as follow :
 
-$ virtualenv myenv --python=pyton3.8
+$ virtualenv myenv --python=python3.8
 
 The Virtual environnement now created we can activate it by using :
 
