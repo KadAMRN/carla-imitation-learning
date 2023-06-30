@@ -19,5 +19,58 @@ $ pip install -r Requirements.txt
 ## How to :
 ### Behavioural cloning :
 
-We can divide this part of the project in three parts, just as in machine learning, so the first part would be the \b{data gathering}
+We can divide this part of the project in three parts, just as in machine learning, so the first part would be the data gathering, next we'd have the model training, for this task we use the Xception, since we are using pytorch instead of tensorflow for Cuda compatibility reasons 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
