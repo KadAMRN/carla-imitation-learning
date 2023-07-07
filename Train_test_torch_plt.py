@@ -136,21 +136,44 @@ for epoch in range(EPOCHS):
         optimizer.step()
 
         running_loss += loss.item() * inputs.size(0)
+        # print(running_loss)
 
         # _, predicted = torch.max(outputs.data, 1)
-        total_samples += labels.size(0)
-        total_correct += (outputs == labels).sum().item()
+        # total_samples += labels.size(0)
+        # total_correct += (outputs == labels).sum().item()
 
-        batch_accuracy = (outputs == labels).sum().item() / labels.size(0)
-        batch_accuracies.append(batch_accuracy)
+        # batch_accuracy =1-running_loss #(outputs == labels).sum().item() / labels.size(0)
+        # batch_accuracies.append(batch_accuracy)
 
         # Print batch loss and accuracy
         if batch_idx % 100 == 0:
             batch_loss = loss.item() * inputs.size(0)
+            batch_losses.append(batch_loss)
+
+            batch_accuracy=1-batch_loss
+            if batch_accuracy<0 :
+
+                batch_accuracy
+
+            batch_accuracies.append(batch_accuracy)
             print(f"Epoch {epoch+1}/{EPOCHS} Batch {batch_idx}/{len(train_loader)} Loss: {batch_loss:.4f} Accuracy: {batch_accuracy:.4f}")
 
+    # # Plot batch loss
+    # plt.plot(batch_losses)
+    # plt.title("Batch Loss")
+    # plt.xlabel("Batch")
+    # plt.ylabel("Loss")
+    # plt.show()
+
+    # # Plot batch accuracy
+    # plt.plot(batch_accuracies)
+    # plt.title("Batch Accuracy")
+    # plt.xlabel("Batch")
+    # plt.ylabel("Accuracy")
+    # plt.show()
+
     epoch_loss = running_loss / len(train_dataset)
-    epoch_accuracy = total_correct / total_samples
+    epoch_accuracy = 1-epoch_loss #total_correct / total_samples
     epoch_losses.append(epoch_loss)
     epoch_accuracies.append(epoch_accuracy)
 
