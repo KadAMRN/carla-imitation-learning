@@ -59,7 +59,7 @@ Once this code executed, wait for the model to be loaded, then the vehicle shoul
 
 Congratulations ! You have now executed the Behavioral Cloning program. 
 
-Note : if you want to skip the training part we have provided the test_model_.pt file that you can use directly for the Behavioral Cloning model agent.
+Note : if you want to skip the training part we have provided the test_model_.pt file that you can use directly for the Behavioral Cloning model agent in the following link https://we.tl/t-PBDBd1AHiz
 
 
 
