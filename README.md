@@ -49,7 +49,15 @@ Now to run the training and testing program, please use the following command :
 
 $ python Train_test_torch.py --file your/path/and/file_name.pt
 
-#### Model loading and prediction :
+#### Model loading and prediction for controlling the vehicle  :
+
+That is the easiest part now that everything is setup, in order to use the you just need to write this code below in your Anaconda prompt (Make sure that CarlaUE4.exe is running) :
+
+$ python behavioral_cloning_model_agent.py --file your/path/and/file_name.pt
+
+Once this code executed, wait for the model to be loaded, then the vehicle should start moving on its own.
+
+Congratulations ! You have now executed the Behavioral Cloning program. 
 
 
 
