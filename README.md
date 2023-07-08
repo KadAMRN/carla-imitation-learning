@@ -59,6 +59,8 @@ Once this code executed, wait for the model to be loaded, then the vehicle shoul
 
 Congratulations ! You have now executed the Behavioral Cloning program. 
 
+<img width="1278" alt="image" src="https://github.com/KadAMRN/carla-imitation-learning/assets/87100217/22e41eab-6d49-4598-86b5-1faef449fb0b">
+
 Note : if you want to skip the training part we have provided the test_model_.pt file that you can use directly for the Behavioral Cloning model agent in the following link https://we.tl/t-PBDBd1AHiz
 
 
@@ -66,15 +68,19 @@ Note : if you want to skip the training part we have provided the test_model_.pt
 
 Please refer to the official Learning by Cheating repository on this link https://github.com/dotchen/LearningByCheating for a detailed tutorial on how to run the program (since model files are 102MB and can't be uploaded on this repository).
 
+<img width="408" alt="lbc demo" src="https://github.com/KadAMRN/carla-imitation-learning/assets/87100217/53867830-7b4a-438f-9c7c-0c664e001592">
+
 @inproceedings{chen2019lbc,
   author    = {Chen, Dian and Zhou, Brady and Koltun, Vladlen and Kr\"ahenb\"uhl, Philipp},
   title     = {Learning by Cheating},
   booktitle = {Conference on Robot Learning (CoRL)},
-  year      = {2019},
+  year      = {2019
+},
 }
 
 ### Dagger Algorithm :
 For this algorithm we didn't use Carla simulator for the experience but we chose a less complex environnement which is a gym environnement called "Cartpole", all the details are available on the project_dagger.ipynb
+
 
 
 
