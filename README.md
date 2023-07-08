@@ -35,6 +35,9 @@ and we can also make our data collection with a manual control of the car using 
 
 $ python data_collection_no_map_data.py --folder desired/data/saving/folder/
 
+<img width="1280" alt="image" src="https://github.com/KadAMRN/carla-imitation-learning/assets/87100217/a8037d0c-8f20-433e-b53e-97d546a2bc86">
+
+
 #### Model training and testing :
 
 for this task we use the Xception, since we are using pytorch instead of tensorflow for Cuda compatibility reasons we used the Xception model converted to the torch format from the following repository : 
@@ -48,6 +51,9 @@ which should be downloaded and put in your carla folder in order to import it to
 Now to run the training and testing program, please use the following command :
 
 $ python Train_test_torch.py --file your/path/and/file_name.pt
+
+<img width="438" alt="image" src="https://github.com/KadAMRN/carla-imitation-learning/assets/87100217/85cf9127-b3dc-4d33-97f9-5efc52d81493">
+
 
 #### Model loading and prediction for controlling the vehicle  :
 
