@@ -1,8 +1,3 @@
-# braking to correct, rear drive
-
-# add interactive map, start and end point
-
-
 #Dependencies
 import glob
 import os
@@ -45,21 +40,19 @@ def control_vehicle(vehicle):
     steer = 0.0
     throttle = 0.0
     brake = 0.0
-    # drive_mode = "forward"  # Initial drive mode
-    # reverse_mode = False  # Reverse mode status
-
+ 
     # Keyboard input handlers
     def on_key_release(key):
         nonlocal steer, throttle, brake
 
         if key.name == "left":
-            steer=0#steer += STEER_INCREMENT # steer=0# steer += STEER_INCREMENT
+            steer=0
         elif key.name == "right":
-            steer=0#steer -= STEER_INCREMENT # steer=0# 
+            steer=0
         if key.name == "up":
-            throttle =0#throttle -= THROTTLE_INCREMENT # throttle =0# 
+            throttle =0
         if key.name == "down":
-            brake=0#brake -= BRAKE_INCREMENT # brake=0# 
+            brake=0
 
         # Update vehicle controls
         control = carla.VehicleControl()
@@ -80,20 +73,13 @@ def control_vehicle(vehicle):
         if key.name == "down":
             brake += BRAKE_INCREMENT
             throttle -=THROTTLE_INCREMENT
-        # if key.name == "t":
-        #     if drive_mode == "forward":
-        #         drive_mode = "reverse"
-        #         reverse_mode = True
-        #     else:
-        #         drive_mode = "forward"
-        #         reverse_mode = False
+
 
         # Update vehicle controls
         control = carla.VehicleControl()
         control.steer = steer
         control.throttle = throttle
         control.brake = brake
-        # control.reverse = reverse_mode
         vehicle.apply_control(control)
 
     # Register keyboard event handlers
@@ -183,8 +169,8 @@ except:
 #Spawn vehicle
 #Get the blueprint concerning a tesla model 3 car
 bp = world.get_blueprint_library().find('vehicle.tesla.model3')
-#we attribute the role name brax to our blueprint
-bp.set_attribute('role_name','brax')
+#we attribute the role name amrn to our blueprint
+bp.set_attribute('role_name','amrn')
 #get a random color
 color = random.choice(bp.get_attribute('color').recommended_values)
 #put the selected color on our blueprint
@@ -293,7 +279,6 @@ if vehicle is not None:
 #Close everything   
 inputs_file.close()
 outputs_file.close()
-# cv2.destroyAllWindows()
 print("Data retrieval finished")
 print(directory)
 

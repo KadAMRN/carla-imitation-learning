@@ -156,8 +156,8 @@ world = client.get_world()
 #Spawn vehicle
 #Get the blueprint concerning a tesla model 3 car
 bp = world.get_blueprint_library().find('vehicle.tesla.model3')
-#we attribute the role name brax to our blueprint
-bp.set_attribute('role_name','brax')
+#we attribute the role name amrn to our blueprint
+bp.set_attribute('role_name','amrn')
 #get a random color
 color = random.choice(bp.get_attribute('color').recommended_values)
 #put the selected color on our blueprint
@@ -218,18 +218,12 @@ def process_image(image):
 
      
 
-# Enable autopilot or keyboard control based on the flag
-# if args.autopilot:
-#     vehicle.set_autopilot(True)
-# else:
-#     control_vehicle(vehicle)
-# control = carla.VehicleControl()
+
 
 
 #Attach event listeners
 cam.listen(lambda img : control_vehicle(img,vehicle))
 
-# vehicle.apply_control(control)
 
 
 # Start the spectator view update loop
@@ -239,7 +233,7 @@ update_spectator_view_thread.start()
 # Main loop
 try:
     while True:
-        # print(control)
+        
         
         world.tick()
         print(vehicle.get_control())
