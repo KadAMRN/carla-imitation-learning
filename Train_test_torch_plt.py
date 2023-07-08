@@ -22,26 +22,21 @@ def parse_arguments():
 # Parse the command-line arguments
 args = parse_arguments()
 
-# Access the file path argument
 
-
-
-# Use the file path in your code
-# For example, print the file path
 
 
 # Set device configuration
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Variables
-DIRECTORY = args.data_path #"C:\\Users\\Kader\\OneDrive\\Bureau\\WindowsNoEditor\\my work\\TestData20230703_1654_npy" TestData20230618_2317_npy
+DIRECTORY = args.data_path 
 model_file_path = args.file
 print("File path:", model_file_path)
 WIDTH = 200
 HEIGHT = 88
 EPOCHS = 15
 TRAINING_BATCH_SIZE = 10
-TEST_SIZE = 0.2  # Percentage of data to use for testing
+TEST_SIZE = 0.2  # Testing size
 
 INPUTS_FILE = open(DIRECTORY + "\\inputs.npy", "br") 
 OUTPUTS_FILE = open(DIRECTORY + "\\outputs.npy", "br")
@@ -136,14 +131,7 @@ for epoch in range(EPOCHS):
         optimizer.step()
 
         running_loss += loss.item() * inputs.size(0)
-        # print(running_loss)
 
-        # _, predicted = torch.max(outputs.data, 1)
-        # total_samples += labels.size(0)
-        # total_correct += (outputs == labels).sum().item()
-
-        # batch_accuracy =1-running_loss #(outputs == labels).sum().item() / labels.size(0)
-        # batch_accuracies.append(batch_accuracy)
 
         # Print batch loss and accuracy
         if batch_idx % 100 == 0:
@@ -158,22 +146,10 @@ for epoch in range(EPOCHS):
             batch_accuracies.append(batch_accuracy)
             print(f"Epoch {epoch+1}/{EPOCHS} Batch {batch_idx}/{len(train_loader)} Loss: {batch_loss:.4f} Accuracy: {batch_accuracy:.4f}")
 
-    # # Plot batch loss
-    # plt.plot(batch_losses)
-    # plt.title("Batch Loss")
-    # plt.xlabel("Batch")
-    # plt.ylabel("Loss")
-    # plt.show()
-
-    # # Plot batch accuracy
-    # plt.plot(batch_accuracies)
-    # plt.title("Batch Accuracy")
-    # plt.xlabel("Batch")
-    # plt.ylabel("Accuracy")
-    # plt.show()
+ 
 
     epoch_loss = running_loss / len(train_dataset)
-    epoch_accuracy = 1-epoch_loss #total_correct / total_samples
+    epoch_accuracy = 1-epoch_loss 
     epoch_losses.append(epoch_loss)
     epoch_accuracies.append(epoch_accuracy)
 
@@ -181,19 +157,6 @@ for epoch in range(EPOCHS):
 
 print("Training finished")
 
-# Plot batch loss
-plt.plot(batch_losses)
-plt.title("Batch Loss")
-plt.xlabel("Batch")
-plt.ylabel("Loss")
-plt.show()
-
-# Plot batch accuracy
-plt.plot(batch_accuracies)
-plt.title("Batch Accuracy")
-plt.xlabel("Batch")
-plt.ylabel("Accuracy")
-plt.show()
 
 # Plot epoch loss
 plt.plot(epoch_losses)
@@ -225,8 +188,6 @@ with torch.no_grad():
 test_loss /= len(test_dataset)
 print(f"Testing Loss: {test_loss:.4f}")
 
-# Save the trained model
-# model_file_path = "C:\\Users\\Kader\\OneDrive\\Bureau\\WindowsNoEditor\\my work\\Torch_trained\\test_model_3.pt"
-# torch.save(model.state_dict(), model_file_path)
+# Saving the model in a Pytoch format on the designed path
 torch.save(model, model_file_path)
 print(f"Model saved to {model_file_path}")
