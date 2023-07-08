@@ -54,6 +54,10 @@ $ python Train_test_torch.py --file your/path/and/file_name.pt
 
 <img width="438" alt="image" src="https://github.com/KadAMRN/carla-imitation-learning/assets/87100217/85cf9127-b3dc-4d33-97f9-5efc52d81493">
 
+![E acc big data](https://github.com/KadAMRN/carla-imitation-learning/assets/87100217/1264329e-625b-4d95-8c68-bcb343886cba)
+
+
+
 
 #### Model loading and prediction for controlling the vehicle  :
 
