@@ -1,6 +1,6 @@
 # carla-imitation-learning
 ## Note : This repo is still in developpement so it might change in the Future
-### Before getting into the imitation learning part we need to setup our environnement for this we use the virtualen extension which coul be installed by executing the following line of code in your Anaconda prompt :
+### Before getting into the imitation learning part we need to setup our environnement for this we use the virtualenv extension which coul be installed by executing the following line of code in your Anaconda prompt :
 $ pip install virtualenv
 now that we installed the virtualenv extension we need to create our python virtual environnement, in our case we setup our environnement on python 3.8 as follow :
 
@@ -74,7 +74,7 @@ Please refer to the official Learning by Cheating repository on this link https:
 }
 
 ### Dagger Algorithm :
-For this algorithm we didn't use Carla simulator for the experience but we chose a less complex environement 
+For this algorithm we didn't use Carla simulator for the experience but we chose a less complex environnement which is a gym environnement called "Cartpole", all the details are available on the project_dagger.ipynb
 
 
 
