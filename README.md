@@ -62,6 +62,22 @@ Congratulations ! You have now executed the Behavioral Cloning program.
 Note : if you want to skip the training part we have provided the test_model_.pt file that you can use directly for the Behavioral Cloning model agent in the following link https://we.tl/t-PBDBd1AHiz
 
 
+### Learning by cheating :
+
+Please refer to the official Learning by Cheating repository on this link https://github.com/dotchen/LearningByCheating for a detailed tutorial on how to run the program (since model files are 102MB and can't be uploaded on this repository).
+
+@inproceedings{chen2019lbc,
+  author    = {Chen, Dian and Zhou, Brady and Koltun, Vladlen and Kr\"ahenb\"uhl, Philipp},
+  title     = {Learning by Cheating},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2019},
+}
+
+### Dagger Algorithm :
+For this algorithm we didn't use Carla simulator for the experience but we chose a less complex environement 
+
+
+
 
 
 
